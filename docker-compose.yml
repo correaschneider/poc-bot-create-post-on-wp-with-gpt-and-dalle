@@ -1,0 +1,10 @@
+services:
+  bot:
+    image: node:22-slim
+    working_dir: /app
+    env_file:
+      - .env
+    volumes:
+      - ./bot:/app
+    # command: node bot.js
+    command: tail -f /dev/null
